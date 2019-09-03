@@ -1,0 +1,103 @@
+body {
+  background-color: #f9fbfd;
+}
+
+.topic {
+  color: #ff0000;
+}
+
+img {
+  box-shadow: 1px 1px 1px 1px #000000;
+  border-radius: 20px;
+}
+
+main {
+  position: relative;
+}
+
+.position {
+  position: absolute;
+  padding: 20px;
+  left: 25%;
+  right: 25%;
+  background-color: #f1f4f5;
+  box-shadow: 0px 0px 1px #000000;
+  border-radius: 5px;
+  top: 10px;
+  margin-bottom: 20px;
+}
+
+.topic-head {
+  color: #0000ff;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #0000ff;
+}
+
+.link:hover {
+  color: #ff0000;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.form {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 10%;
+}
+
+.modal #name {
+  width: 20rem;
+  height: 25px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #818080;
+  padding-left: 5px;
+}
+
+.modal #email {
+  width: 20rem;
+  height: 25px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #818080;
+  padding-left: 5px;
+}
+
+.modal #title {
+  width: 20rem;
+  height: 25px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #818080;
+  padding-left: 5px;
+}
+
+fieldset {
+  border-radius: 10px;
+  color: #0000ff;
+  font-size: 1.5rem;
+}
+
+.modal .button {
+  font-size: 1.5rem;
+}
