@@ -101,3 +101,29 @@ fieldset {
 .modal .button {
   font-size: 1.5rem;
 }
+
+#close {
+  background-color: #ff0000;
+  color: #f1f4f5;
+  border-style: none;
+  cursor: pointer;
+}
+
+#close:hover {
+  background-color: #f1f4f5;
+  color: #ff0000;
+  border-style: none;
+}
+
+#send {
+  background-color: #137e2e;
+  color: #f1f4f5;
+  border-style: none;
+  cursor: pointer;
+}
+
+#send:hover {
+  background-color: #f1f4f5;
+  color: #137e2e;
+  border-style: none;
+}

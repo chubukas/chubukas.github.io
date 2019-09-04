@@ -19,44 +19,49 @@ contact.addEventListener("click", show);
 
 close.addEventListener("click", nonShow);
 
-const validateForm = () => {
+const validateForm = event => {
+  event.preventDefault();
   let title = document.forms["myform"]["title"];
   let name = document.forms["myform"]["name"];
   let email = document.forms["myform"]["email"];
   let message = document.forms["myform"]["message"];
+  let req = /^\d$/.test(name.value);
+  console.log(req);
 
   if (title.value == "") {
     alert("please provide the title");
+    title.focus();
     return false;
-  }
-
-  if (name.value == "") {
+  } else if (name.value == "") {
     alert("please provide your name");
-    name.value == "";
+    name.focus();
     return false;
-  }
-
-  if (name.value.length < 4) {
+  } else if (req) {
+    alert("please provide a valid name");
+    name.value = " ";
+    name.focus();
+    return false;
+  } else if (name.value.length < 4) {
     alert("Your name must be atlist four characters long");
     name.value == "";
+    name.focus();
     return false;
-  }
-
-  if (email.value == "") {
+  } else if (email.value == "") {
     alert("please provide your email");
     email.value == "";
+    email.focus();
     return false;
-  }
-
-  if (message.value == "") {
+  } else if (message.value == "") {
     alert("please provide your message");
+    message.focus();
     return false;
-  }
-
-  if (message.value.length < 20) {
+  } else if (message.value.length < 20) {
     alert("Your message must be atlist twenty characters long");
+    message.focus();
     return false;
+  } else {
+    alert("Message Sent Successfully");
   }
 };
 
-button.addEventListener("click", validateForm);
+button.addEventListener("click", event => validateForm(event));
