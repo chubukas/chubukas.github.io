@@ -25,8 +25,6 @@ const validateForm = event => {
   let name = document.forms["myform"]["name"];
   let email = document.forms["myform"]["email"];
   let message = document.forms["myform"]["message"];
-  let req = /^\d$/.test(name.value);
-  console.log(req);
 
   if (title.value == "") {
     alert("please provide the title");
@@ -34,11 +32,6 @@ const validateForm = event => {
     return false;
   } else if (name.value == "") {
     alert("please provide your name");
-    name.focus();
-    return false;
-  } else if (req) {
-    alert("please provide a valid name");
-    name.value = " ";
     name.focus();
     return false;
   } else if (name.value.length < 4) {
